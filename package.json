@@ -1,14 +1,14 @@
 {
-  "name": "aws-serverless-typescript-api-2",
+  "name": "pbf-serverless-example",
   "version": "1.0.0",
   "description": "Serverless aws-nodejs-typescript template",
   "main": "serverless.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package:service": "AWS_PROFILE=serverless-roamina-dev-environment npx sls package",
-    "deploy:service": "AWS_PROFILE=serverless-roamina-dev-environment npx sls deploy",
-    "invoke:hello": "AWS_PROFILE=serverless-roamina-dev-environment npx sls invoke local -f hello  --path ./__tests/__mock_data/hello.event.json",
-    "invoke:goodbye": "AWS_PROFILE=serverless-roamina-dev-environment npx sls invoke local -f goodbye  --path ./__tests/__mock_data/goodbye.event.json"
+    "package:service": "AWS_PROFILE=848619275210_LambdaAPIGatewayAccess npx sls package",
+    "deploy:service": "AWS_PROFILE=848619275210_LambdaAPIGatewayAccess npx sls deploy",
+    "invoke:hello": "AWS_PROFILE=848619275210_LambdaAPIGatewayAccess npx sls invoke local -f hello  --path ./__tests/__mock_data/hello.event.json",
+    "invoke:goodbye": "AWS_PROFILE=848619275210_LambdaAPIGatewayAccess npx sls invoke local -f goodbye  --path ./__tests/__mock_data/goodbye.event.json"
   },
   "engines": {
     "node": ">=14.15.0"

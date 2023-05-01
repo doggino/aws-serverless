@@ -1,5 +1,5 @@
 import { goodbye } from "@functions/goodbye/goodbye.sls";
-import { hello } from "@functions/hello/hello.sls";
+import { getHomepageData } from "@functions/homepage/getHomepageData.sls";
 import type { AWS } from "@serverless/typescript";
 
 const serverlessConfiguration: AWS = {
@@ -9,17 +9,12 @@ const serverlessConfiguration: AWS = {
   provider: {
     name: "aws",
     runtime: "nodejs14.x",
-    apiGateway: {
-      minimumCompressionSize: 1024,
-      shouldStartNameWithService: true,
-    },
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
     },
   },
-  // import the function via paths
-  functions: { hello, goodbye },
+  functions: { getHomepageData, goodbye },
   package: { individually: true },
   custom: {
     esbuild: {
